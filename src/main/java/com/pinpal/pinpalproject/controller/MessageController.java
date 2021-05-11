@@ -65,7 +65,8 @@ public class MessageController {
         posterMessage.setSenderId(userPrincipal.getId());
         posterMessage.setTimestamp(System.currentTimeMillis());
         posterMessage.setUserImage(userPrincipal.getImageURL());
-        posterMessage.setUserName(userPrincipal.getUsername());
+        posterMessage.setUserName(userPrincipal.getName());
+        System.out.println("hiiiiiiiiiiiii"+userPrincipal.toString());
 
         if (!userPrincipal.getId().equals(optionalPoster.get().getUser().getId())) {
             try {
